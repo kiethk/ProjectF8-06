@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #5d3bee;
+}
+
+::before,
+::after {
+    display: inline-block;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -19,4 +28,70 @@ select,
 button {
     font-size: inherit;
     font-family: inherit;
+}
+
+/* ========================Common======================== */
+a {
+    text-decoration: none;
+}
+
+/* ========================Header======================== */
+
+.header {
+    padding: 20px 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.envelope-box {
+    display: flex;
+    align-items: center;
+}
+
+.envelope {
+    position: absolute;
+}
+
+.envelope-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(93, 59, 238, 0.2);
+    border-radius: 50%;
+}
+
+.id-branch {
+    margin-left: 10px;
+    color: #080415;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__link {
+    padding: 8px 21px;
+    color: #51586a;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.navbar__link:hover {
+    text-decoration: underline;
 }
