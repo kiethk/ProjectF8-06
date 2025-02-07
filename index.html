@@ -107,67 +107,48 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        <!-- ==================Header=================== -->
+        <!-- ======================Header==================== -->
         <header class="header">
-            <div class="container">
+            <div class="header__content">
                 <div class="header__inner">
-                    <a href="#!" class="id-branch-box">
-                        <div class="envelope-box">
-                            <div class="envelope-circle">
-                                <img
-                                    src="./assets/img/envelope.svg"
-                                    alt=""
-                                    class="envelope"
-                                />
-                            </div>
-                            <p class="id-branch">hi@arif.interactive</p>
+                    <a href="#!" class="header__mail-link">
+                        <div class="header__mail-circle">
+                            <img
+                                src="./assets/img/envelope.svg"
+                                alt=""
+                                class="header__envelope"
+                            />
                         </div>
+                        <p class="header__mail">kiethkce200178@gmail.com</p>
                     </a>
 
-                    <a href="#!" class="logo__link">
+                    <a href="#" class="logo__link">
                         <img src="./assets/img/logo.svg" alt="" class="logo" />
                     </a>
 
-                    <nav class="navbar">
-                        <ul class="navbar__list">
-                            <!-- Item 1 -->
-                            <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Projects</a>
-                            </li>
-
-                            <!-- Item 2 -->
-                            <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Journey</a>
-                            </li>
-
-                            <!-- Item 3 -->
-                            <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Service</a>
-                            </li>
-
-                            <!-- Item 4 -->
-                            <li class="navbar__item">
-                                <a href="#!" class="navbar__link">Contact</a>
-                            </li>
-                        </ul>
+                    <nav class="navbar__list">
+                        <a href="#!" class="navbar__item">Projects</a>
+                        <a href="#!" class="navbar__item">Journey</a>
+                        <a href="#!" class="navbar__item">Service</a>
+                        <a href="#!" class="navbar__item">Contact</a>
                     </nav>
                 </div>
             </div>
         </header>
 
         <main>
-            <!-- ==================Hero=================== -->
+            <!-- ======================Hero==================== -->
             <section class="hero">
                 <div class="container">
                     <div class="hero__inner">
                         <figure
                             class="hero__media"
                             data-aos="fade-right"
-                            data-aos-duration="1000"
+                            data-aos-duration="2000"
                         >
                             <img
                                 src="./assets/img/hero__img.svg"
-                                alt="a smiling man"
+                                alt=""
                                 class="hero__img"
                             />
                             <img
@@ -177,67 +158,50 @@
                             />
                         </figure>
 
-                        <section
-                            class="hero__content"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                        >
-                            <img
-                                src="./assets/img/hero-decor.svg"
-                                alt=""
-                                class="hero__decor"
-                            />
-
-                            <h1 class="heading hero__heading">
+                        <section class="hero__content">
+                            <h1
+                                class="heading hero__heading"
+                                data-aos="fade-left"
+                            >
                                 An Interactive Designer
                             </h1>
-                            <p class="desc hero__desc">
+                            <p
+                                class="desc hero__desc"
+                                data-aos="fade-left"
+                                data-aos-delay="500"
+                            >
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non nisl tincidunt ut
                                 elementum turpis.
                             </p>
-
-                            <div class="hero__action">
+                            <div
+                                class="hero__action"
+                                data-aos="fade-left"
+                                data-aos-delay="1000"
+                            >
                                 <a href="#!" class="btn hero__btn">
                                     Book a Call
                                 </a>
-
                                 <a href="#!" class="hero__link">My Works</a>
                             </div>
 
-                            <div class="hero__follow">
-                                <p class="hero__follow-desc">Follow me on:</p>
-
-                                <ul class="hero__follow-platform-list">
-                                    <li class="hero__follow-platform-item">
-                                        <a
-                                            href="#!"
-                                            class="hero__follow-platform-link"
-                                        >
-                                            <i class="fa-brands fa-behance"></i>
-                                        </a>
-                                    </li>
-                                    <li class="hero__follow-platform-item">
-                                        <a
-                                            href="#!"
-                                            class="hero__follow-platform-link"
-                                        >
-                                            <i
-                                                class="fa-brands fa-dribbble"
-                                            ></i>
-                                        </a>
-                                    </li>
-                                    <li class="hero__follow-platform-item">
-                                        <a
-                                            href="#!"
-                                            class="hero__follow-platform-link"
-                                        >
-                                            <i
-                                                class="fa-brands fa-instagram"
-                                            ></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div
+                                class="follow__box"
+                                data-aos="fade-left"
+                                data-aos-delay="50"
+                            >
+                                <p class="follow-text">Follow me on:</p>
+                                <div class="platform-list">
+                                    <a href="#!" class="platform-item">
+                                        <i class="fa-brands fa-behance"> </i>
+                                    </a>
+                                    <a href="#!" class="platform-item">
+                                        <i class="fa-brands fa-dribbble"></i>
+                                    </a>
+                                    <a href="#!" class="platform-item">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -245,13 +209,17 @@
             </section>
         </main>
         <script>
-            window.addEventListener("scroll", () => {
-                document.body.classList.toggle("scrolled", window.scrollY > 0);
+            window.addEventListener("scroll", function () {
+                let header = document.querySelector("header");
+                if (window.scrollY > 50) {
+                    // Nếu cuộn xuống quá 50px
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
             });
         </script>
-
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
         <script>
             AOS.init();
         </script>
