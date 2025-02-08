@@ -161,6 +161,7 @@ header.scrolled {
 /* ========================Hero======================== */
 
 .hero {
+    overflow: hidden;
     padding-top: 55px;
     background: #fbfaff;
 }
@@ -187,6 +188,11 @@ header.scrolled {
     position: absolute;
     left: -200px;
     bottom: 0;
+}
+
+.hero__content {
+    z-index: 1;
+    position: relative;
 }
 
 .hero__heading {
@@ -257,4 +263,108 @@ header.scrolled {
     margin-left: 15px;
     align-items: center;
     column-gap: 20px;
+}
+
+.hero__decor-small {
+    width: 341px;
+    left: 322px;
+    bottom: -185px;
+    z-index: -1;
+    position: absolute;
+}
+
+/* ========================Client======================== */
+
+.client {
+    margin-top: 100px;
+}
+
+.client__heading {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 4.2rem;
+    letter-spacing: -0.11rem;
+}
+
+.client__inner .row {
+    align-items: center;
+}
+
+.client__heading::before {
+    position: absolute;
+    top: 17px;
+    left: -100px;
+    content: "";
+    display: inline-block;
+    width: 86px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.client__list {
+    margin-left: 74px;
+    display: grid;
+    grid-template: auto auto / repeat(4, auto);
+    row-gap: 39px;
+}
+
+/* ========================Specs======================== */
+
+.specs {
+    margin-top: 133px;
+}
+
+.specs .row-cols-3 {
+    flex-wrap: nowrap;
+}
+
+.specs__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.specs__desc {
+    margin-top: 20px;
+    width: 534px;
+    text-align: center;
+}
+
+.specs__list {
+    margin-top: 60px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.specs__item {
+    background: #fbfaff;
+    padding: 32px 42px;
+}
+
+.specs__circle {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specs__item-title {
+    margin-top: 22px;
+    color: #080415;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -1.28px;
+}
+
+.specs__item-desc {
+    margin-top: 15px;
+    color: #51586a;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 166.667%;
 }
