@@ -115,6 +115,10 @@
         text-align: center;
     }
 
+    .about__info > .row {
+        justify-content: space-between;
+    }
+
     .gallery__list .row {
         overflow: hidden;
         flex-wrap: nowrap;
@@ -173,6 +177,7 @@
     .footer__copy {
         text-align: center;
         font-size: 2.5rem;
+        margin-bottom: 29px;
     }
 
     .footer__link {
@@ -198,8 +203,23 @@
         order: 2;
     }
 
+    .navbar__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        padding: 100px 40px;
+        width: 60vw;
+        height: 100vh;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
     .navbar__checkbox:checked ~ .navbar__menu {
-        transform: none;
+        right: 0;
         opacity: 1;
     }
 
@@ -208,32 +228,14 @@
         opacity: 0.3;
     }
 
-    .navbar__menu {
-        transform: translateX(100%);
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 30px;
-        padding: 100px 40px;
-        top: 0;
-        right: 0;
-        width: 60vw;
-        height: 100vh;
-        background: #fff;
-        position: fixed;
-        transition: all 0.3s ease;
-    }
-
     .navbar__menu .navbar__item {
         font-size: 3.5rem;
     }
 
     .overlay {
         visibility: hidden;
-
         position: fixed;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         top: 0;
         right: 0;
@@ -251,10 +253,33 @@
 /* Mobile */
 
 @media screen and (max-width: 767px) {
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+    .heading {
+        font-size: 3.6rem;
+    }
+
+    .desc {
+        font-size: 1.6rem;
+        width: 90%;
+    }
+
     .btn {
         height: 55px;
         width: 147px;
         min-width: 147px;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
     }
 
     .header .logo {
@@ -270,6 +295,10 @@
         .header__nav-icon {
             width: 17px;
         }
+    }
+
+    .hero__inner {
+        padding-top: 50px;
     }
 
     .hero__heading {
@@ -310,5 +339,174 @@
 
     .navbar__menu .navbar__item {
         font-size: 2.2rem;
+    }
+
+    .client__heading {
+        max-width: 170px;
+        font-size: 2.8rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .client__heading::before {
+        width: 48px;
+    }
+
+    .client__list {
+        column-gap: 30px;
+    }
+
+    .specs__desc {
+        width: 83%;
+    }
+
+    .specs__item-title {
+        font-size: 2.8rem;
+    }
+
+    .specs__item-desc {
+        font-size: 1.6rem;
+    }
+
+    .project__heading {
+        width: 65%;
+    }
+
+    .project__desc {
+        margin-top: 20px;
+    }
+
+    .project__list > .row {
+        --spacer-y: 20px;
+    }
+
+    .project__item {
+        padding: 20px 15px;
+    }
+
+    .project__item-img {
+        height: auto;
+        width: 122px;
+        margin-left: 22px;
+    }
+
+    .project__item-title {
+        font-size: 2.4rem;
+    }
+
+    .project__item-desc {
+        font-size: 1.4rem;
+    }
+
+    .project__item-more {
+        font-size: 1.6rem;
+    }
+
+    .about__greeting {
+        font-size: 2rem;
+    }
+
+    .about__num {
+        font-size: 3rem;
+    }
+
+    .about__info-content {
+        font-size: 1.6rem;
+    }
+
+    .video__control {
+        width: 77px;
+    }
+
+    .intro__video {
+        font-size: 1.2rem;
+        width: 118px;
+        height: 44px;
+    }
+
+    .comment__content {
+        font-size: 1.8rem;
+    }
+
+    .comment__list {
+        padding: 0;
+    }
+
+    .comment__decor {
+        width: 96px;
+    }
+
+    .comment__name {
+        font-size: 2.4rem;
+    }
+
+    .comment__author-info {
+        font-size: 1.6rem;
+    }
+
+    .question__sentence {
+        font-size: 2.4rem;
+    }
+
+    .question__item {
+        padding: 0 85px 15px 10px;
+    }
+
+    .question__label {
+        width: 33px;
+        height: 33px;
+    }
+
+    .question__plus,
+    .question__minus {
+        width: 9px;
+    }
+
+    .question__answer {
+        font-size: 1.6rem;
+    }
+
+    .gallery__heading-info {
+        font-size: 2rem;
+    }
+
+    .cta {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .cta__emoji {
+        width: 48px;
+    }
+
+    .footer .navbar__item {
+        font-size: 1.6rem;
+    }
+
+    .footer .header__mail {
+        font-size: 2.2rem;
+    }
+
+    .footer .header-circle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .footer .header__mail-link {
+        margin-top: 58px;
+    }
+
+    .footer .header__envelope {
+        width: 24px;
+    }
+    .footer__copy {
+        font-size: 1.6rem;
+    }
+
+    .footer__link {
+        font-size: 1.6rem;
+    }
+
+    .footer .logo__link .logo {
+        width: 67px;
     }
 }
