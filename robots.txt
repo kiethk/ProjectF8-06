@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kiethk.github.io/ProjectF8-06/sitemap.xml
